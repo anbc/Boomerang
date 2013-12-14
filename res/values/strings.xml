@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="hello">Hello World!</string>
+    <string name="app_name">Boomerang</string>
+    <string name="Phone_Name">phoneName</string>   <!-- 电话薄文件名称, 暂时在配置文件中-->
+    <string name="File_Calalog">fileCalalog</string>	<!-- 文件目录文件名称,暂时在配置文件中 -->
+    <string name="config_file">"configFile.fql"</string>	<!-- 配置文件名称 -->
+    <string name="fql_folder">"fql_guard"</string>	<!-- 保存日志等信息的位于sdcard里的文件夹 -->
+    
+    <string name="SMS_Mark">FQL</string>
+    
+    <string name ="str_username">用户名</string>
+    <string name ="str_password">密码</string>
+    <string name ="str_email_1">第一邮箱</string>
+    <string name ="str_email_2">第二邮箱</string>
+    <string name ="str_default">默认设置</string>
+    <string name ="str_finilsh">完成</string>
+    <string name ="str_cancel">取消</string>
+    <string name ="str_detail_setting">详细设置</string>
+    
+    <string name ="str_cancel_register">取消注册!</string>
+    <string name ="str_cancel_register_message">您确定要取消注册吗?</string>
+    <string name ="str_Ok_alert">确定</string>
+    <string name ="str_cancel_alert">取消</string>
+    
+
+    
+    
+    <string name = "email_suject">飞去来手机卫士</string>
+    <string name = "email_text">欢迎使用飞去来手机安全卫士1.0 ,请查看附件</string>
+    <string name = "app_version">1.01</string>
+    
+    
+    
+    <string name="str_title">选择背光颜色</string>
+  	<string name="str_white">～白色背光～</string>
+ 	<string name="str_blue">～蓝色背光～</string>
+  	<string name="str_pink">～粉红背光～</string>
+ 	<string name="str_green">～浅绿背光～</string> 
+  	<string name="str_orange">～栀色背光～</string> 
+  	<string name="str_yellow">～黃色背光～</string> 
+  	<string name="str_ok">确认</string> 
+  	<string name="str_exit">离开</string> 
+  	<string name="str_log">日志</string>
+</resources>

